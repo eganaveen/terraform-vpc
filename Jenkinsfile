@@ -7,7 +7,7 @@ pipeline{
         stage('Terraform init'){
             steps{
                 sh '''
-                    cp ${ENV}-env/Terrafile .
+                    cp ${ENV}-env/Terrafile .; terrafile
                     terraform init -backend-config=${ENV}-env/${ENV}-backend.tfvars
                 '''
             }
