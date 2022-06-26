@@ -1,3 +1,3 @@
 vpc:
-    source:  "git::https://github.com/eganaveen/tf-module-vpc.git"
+    source:  "https://github.com/eganaveen/tf-module-vpc.git"
     version: "main"
