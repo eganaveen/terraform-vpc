@@ -8,14 +8,14 @@ pipeline{
             steps{
                 sh '''
                     cp dev-env/Terrafile .
-                    terraform init -backend-config={ENV}-env/{ENV}-backend.tfvars
+                    terraform init -backend-config=${ENV}-env/${ENV}-backend.tfvars
                 '''
             }
         }
         stage('Terraform plan'){
             steps{
                 sh '''
-                    terraform plan -var-file={ENV}.tfvars
+                    terraform plan -var-file=${ENV}.tfvars
                 '''
             }
         }
