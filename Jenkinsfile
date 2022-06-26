@@ -15,7 +15,7 @@ pipeline{
         stage('Terraform plan'){
             steps{
                 sh '''
-                    terraform plan -var-file=${ENV}.tfvars
+                    terraform plan -var-file=${ENV}-env/${ENV}.tfvars
                 '''
             }
         }
