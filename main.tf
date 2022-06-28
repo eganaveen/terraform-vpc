@@ -5,4 +5,5 @@ module "vpc" {
   SUBNET_CIDR = var.SUBNET_CIDR
   AZ = var.AZ
   DEFAULT_VPC_ID = var.DEFAULT_VPC_ID
+  DEFAULT_VPC_CIDR = var.DEFAULT_VPC_CIDR
 }
